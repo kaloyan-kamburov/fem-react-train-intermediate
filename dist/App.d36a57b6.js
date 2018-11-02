@@ -23089,7 +23089,12 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Pet = function Pet(props) {
-  return _react.default.createElement("div", {}, [_react.default.createElement("h1", {}, props.name), _react.default.createElement("h2", {}, props.animal), _react.default.createElement("h2", {}, props.breed)]);
+  //   return React.createElement("div", {}, [
+  //     React.createElement("h1", {}, props.name),
+  //     React.createElement("h2", {}, props.animal),
+  //     React.createElement("h2", {}, props.breed)
+  //   ]);
+  return _react.default.createElement("div", null, _react.default.createElement("h1", null, props.name), _react.default.createElement("h2", null, props.animal), _react.default.createElement("h2", null, props.breed));
 };
 
 var _default = Pet;
@@ -23142,23 +23147,35 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
-        id: "my-id"
-      }, [_react.default.createElement("h1", {
-        onClick: this.handleTitleClick
-      }, "Adopt Me!"), _react.default.createElement(_Pet.default, {
-        name: "Luna",
-        animal: "Dog",
-        breed: "Havanese"
-      }), _react.default.createElement(_Pet.default, {
-        name: "Pepper",
-        animal: "bird",
-        breed: "Cockatie"
-      }), _react.default.createElement(_Pet.default, {
-        name: "Doink",
-        animal: "Cat",
-        breed: "Mixed"
-      })]);
+      // return React.createElement("div", { id: "my-id" }, [
+      //   React.createElement(
+      //     "h1",
+      //     {
+      //       onClick: this.handleTitleClick
+      //     },
+      //     "Adopt Me!"
+      //   ),
+      //   React.createElement(Pet, {
+      //     name: "Luna",
+      //     animal: "Dog",
+      //     breed: "Havanese"
+      //   }),
+      //   React.createElement(Pet, {
+      //     name: "Pepper",
+      //     animal: "bird",
+      //     breed: "Cockatie"
+      //   }),
+      //   React.createElement(Pet, {
+      //     name: "Doink",
+      //     animal: "Cat",
+      //     breed: "Mixed"
+      //   })
+      // ]);
+      return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Adopt Me!"), _react.default.createElement(_Pet.default, {
+        name: "kiki",
+        animal: "dog",
+        breed: "cat"
+      }));
     }
   }]);
 
@@ -23193,7 +23210,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54084" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52378" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
