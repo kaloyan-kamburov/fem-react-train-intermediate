@@ -21,7 +21,6 @@ class Results extends React.Component {
       .find({ output: "full", location: "Seattle, WA" })
       .then(data => {
         let pets;
-        console.log(data);
 
         if (data.petfinder.pets && data.petfinder.pets.pet) {
           if (Array.isArray(data.petfinder.pets.pet)) {
@@ -48,6 +47,7 @@ class Results extends React.Component {
           } else {
             breed = pet.breeds.breed;
           }
+          const location = `${pet.contact.city}, ${pet.contact.state}`;
           return (
             <Pet
               key={pet.id}
@@ -56,7 +56,7 @@ class Results extends React.Component {
               name={pet.name}
               breed={breed}
               media={pet.media}
-              location={pet.location}
+              location={location}
             />
           );
         })}
