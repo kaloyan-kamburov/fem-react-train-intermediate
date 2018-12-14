@@ -2,6 +2,7 @@ import React from "react";
 import Pet from "./Pet";
 
 import pf from "petfinder-client";
+import SearchParams from "../SearchParams";
 
 const petfinder = pf({
   key: process.env.API_KEY,

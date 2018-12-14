@@ -15,7 +15,6 @@ class Details extends React.Component {
   };
 
   componentDidMount() {
-    console.log(this.props);
     petfinder.pet
       .get({
         output: "full",
