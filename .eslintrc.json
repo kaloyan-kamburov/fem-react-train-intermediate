@@ -8,7 +8,7 @@
     "prettier/react"
   ],
   "rules": {
-    "react/prop-types": false,
+    "react/prop-types": 0,
     "jsx-a11y/label-has-for": 0,
     "jsx-a11y/img-uses-alt": true,
     "no-console": 1
