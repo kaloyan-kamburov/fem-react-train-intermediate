@@ -5,13 +5,13 @@ import { Router, Link } from "@reach/router";
 import Details from "./Details";
 import Results from "./Results";
 import SearchParams from "./SearchParams";
-import pf from 'petfinder-client';
-import { Provider } from './SearchContext';
+import pf from "petfinder-client";
+import { Provider } from "./SearchContext";
 
 const petfinder = pf({
   key: process.env.API_KEY,
   secret: process.env.API_SECRET
-})
+});
 
 class App extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class App extends React.Component {
       handleBreedChange: this.handleBreedChange,
       handleLocationChange: this.handleLocationChange,
       getBreeds: this.getBreeds
-    }
+    };
   }
   handleLocationChange = e => {
     this.setState({
@@ -69,11 +69,16 @@ class App extends React.Component {
       });
     }
   }
-  render() { 
+  render() {
     return (
       <div>
         <header>
           <Link to="/">Adopt me!</Link>
+          <Link to="/search-params">
+            <span aria-label="search" role="img">
+              Search
+            </span>
+          </Link>
         </header>
         <Provider value={this.state}>
           <Router>

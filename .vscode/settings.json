@@ -1,6 +1,7 @@
 {
-  "prettier.formatOnSave": true,
+  "prettier.proseWrap":"always",
   "prettier.useTabs": true,
   "prettier.tabWidth": 2,
-  "jsx-a11y/alt-text": true
+  "jsx-a11y/alt-text": true,
+  "editor.formatOnSave": true
 }
