@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/kaloyan-kamburov/fem-react-train#readme",
   "devDependencies": {
+    "@emotion/core": "^10.0.6",
+    "@emotion/styled": "^10.0.6",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
