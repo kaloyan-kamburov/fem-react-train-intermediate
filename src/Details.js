@@ -4,6 +4,7 @@ import Loadable from "react-loadable";
 import { navigate } from "@reach/router";
 import Carousel from "./Carousel";
 import Modal from "./Modal";
+import AdoptModalContent from "./AdoptModalContent";
 
 const petfinder = pf({
   key: process.env.API_KEY,
@@ -12,10 +13,10 @@ const petfinder = pf({
 
 const loading = () => <h1>Loading content</h1>;
 
-const LoadableContent = Loadable({
-  loader: () => import("./AdoptModalContent"),
-  loading
-});
+// const LoadableContent = Loadable({
+//   loader: () => import("./AdoptModalContent"),
+//   loading
+// });
 
 class Details extends React.Component {
   state = {
@@ -78,7 +79,7 @@ class Details extends React.Component {
           <p>{description}</p>
           {showModal ? (
             <Modal>
-              <LoadableContent toggleModal={this.toggleModal} name={name} />
+              <AdoptModalContent toggleModal={this.toggleModal} name={name} />
             </Modal>
           ) : null}
         </div>
