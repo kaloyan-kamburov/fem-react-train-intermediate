@@ -9,12 +9,12 @@ import Results from "./Results";
 import Details from "./Details";
 import SearchParams from "./SearchParams";
 
-const LoadableDetails = Loadable({
-  loader: () => import("./Details"),
-  loading() {
-    return <h1>Loading split out code ...</h1>;
-  }
-});
+// const LoadableDetails = Loadable({
+//   loader: () => import("./Details"),
+//   loading() {
+//     return <h1>Loading split out code ...</h1>;
+//   }
+// });
 
 // const LoadableResults = Loadable({
 //   loader: () => import("./Results"),
